@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yg-rH-Xfz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Pack &amp; Go" id="xEf-jn-Z3s"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-68-Wya">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SoZ-22-wWx"/>
+                                    <constraint firstAttribute="width" constant="35" id="cty-Xw-XZs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SoZ-22-wWx"/>
+                                        <exclude reference="cty-Xw-XZs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SoZ-22-wWx"/>
+                                        <include reference="cty-Xw-XZs"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Y-3R-AuT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Yg-rH-Xfz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3If-xO-I83"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q3Y-3R-AuT" secondAttribute="trailing" constant="-20" id="4Ro-fA-lXE"/>
+                            <constraint firstItem="4Yg-rH-Xfz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Vw-Zl-242"/>
+                            <constraint firstItem="Q3Y-3R-AuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8Ie-aT-qbR"/>
+                            <constraint firstItem="QNx-68-Wya" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="JxF-c7-EOx"/>
+                            <constraint firstItem="4Yg-rH-Xfz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dc7-Kx-Lcz"/>
+                            <constraint firstItem="QNx-68-Wya" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="fRD-ru-xjE"/>
+                            <constraint firstItem="Q3Y-3R-AuT" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="kBT-Xt-8YD"/>
+                            <constraint firstItem="Q3Y-3R-AuT" firstAttribute="top" secondItem="4Yg-rH-Xfz" secondAttribute="bottom" constant="1" id="rLc-Vf-M7N"/>
+                            <constraint firstItem="4Yg-rH-Xfz" firstAttribute="centerY" secondItem="QNx-68-Wya" secondAttribute="centerY" id="waH-8h-NPK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4Yg-rH-Xfz"/>
+                                <exclude reference="QNx-68-Wya"/>
+                                <exclude reference="Q3Y-3R-AuT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3If-xO-I83"/>
+                                <exclude reference="7Vw-Zl-242"/>
+                                <exclude reference="dc7-Kx-Lcz"/>
+                                <exclude reference="waH-8h-NPK"/>
+                                <exclude reference="4Ro-fA-lXE"/>
+                                <exclude reference="8Ie-aT-qbR"/>
+                                <exclude reference="kBT-Xt-8YD"/>
+                                <exclude reference="rLc-Vf-M7N"/>
+                                <exclude reference="JxF-c7-EOx"/>
+                                <exclude reference="fRD-ru-xjE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="4Yg-rH-Xfz"/>
+                                <include reference="QNx-68-Wya"/>
+                                <include reference="Q3Y-3R-AuT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3If-xO-I83"/>
+                                <include reference="7Vw-Zl-242"/>
+                                <include reference="dc7-Kx-Lcz"/>
+                                <include reference="waH-8h-NPK"/>
+                                <include reference="4Ro-fA-lXE"/>
+                                <include reference="8Ie-aT-qbR"/>
+                                <include reference="kBT-Xt-8YD"/>
+                                <include reference="rLc-Vf-M7N"/>
+                                <include reference="JxF-c7-EOx"/>
+                                <include reference="fRD-ru-xjE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webview" destination="Q3Y-3R-AuT" id="Kfv-jv-6Oi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="305.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="40" height="40"/>
+    </resources>
+</document>
