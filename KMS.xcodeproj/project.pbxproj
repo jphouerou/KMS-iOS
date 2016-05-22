@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5211634D1CF21B2900672A44 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211634C1CF21B2900672A44 /* Search.swift */; };
 		5221188A1CDB7064009B80BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522118891CDB7064009B80BE /* AppDelegate.swift */; };
 		5221188C1CDB7064009B80BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221188B1CDB7064009B80BE /* ViewController.swift */; };
 		5221188F1CDB7064009B80BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221188D1CDB7064009B80BE /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5211634C1CF21B2900672A44 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		522118861CDB7064009B80BE /* KMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522118891CDB7064009B80BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221188B1CDB7064009B80BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				522118891CDB7064009B80BE /* AppDelegate.swift */,
 				5221188B1CDB7064009B80BE /* ViewController.swift */,
+				5211634C1CF21B2900672A44 /* Search.swift */,
 				5221188D1CDB7064009B80BE /* Main.storyboard */,
 				522118901CDB7064009B80BE /* Assets.xcassets */,
 				522118921CDB7064009B80BE /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5211634D1CF21B2900672A44 /* Search.swift in Sources */,
 				5221188C1CDB7064009B80BE /* ViewController.swift in Sources */,
 				5221188A1CDB7064009B80BE /* AppDelegate.swift in Sources */,
 			);
@@ -487,6 +491,7 @@
 				522118B01CDB7064009B80BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		522118B11CDB7064009B80BE /* Build configuration list for PBXNativeTarget "KMSTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				522118B31CDB7064009B80BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		522118B41CDB7064009B80BE /* Build configuration list for PBXNativeTarget "KMSUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				522118B61CDB7064009B80BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
