@@ -8,8 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+    @IBOutlet var mySearchBar: UISearchBar!
+    @IBOutlet var myTablView: UITableView!
     
+    var searchResults = [String]()
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -27,6 +30,25 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return searchResults.count
+    }
+    
+   
+    
+    @available(iOS 2.0, *)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var myCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! UITableViewCell
+        
+        return myCell
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+    {
+        print("Seaching...")
+    }
     
 }
 

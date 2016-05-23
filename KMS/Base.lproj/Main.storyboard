@@ -403,7 +403,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEW-AE-LGh">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEW-AE-LGh">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Search" id="8uZ-gh-8L6">
@@ -415,11 +415,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-Ak-8W0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-Ak-8W0">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mbJ-LU-vDY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="mbJ-LU-vDY">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbJ-LU-vDY" id="Maf-u8-ZY1">
@@ -427,103 +427,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="19r-7G-j0I">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="19r-7G-j0I" id="whv-yK-wLV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cBE-eL-prp">
-                                        <rect key="frame" x="0.0" y="116" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cBE-eL-prp" id="xJf-zz-adK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Jgm-q9-R5r">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jgm-q9-R5r" id="IFJ-Hy-BzZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yoa-md-bwp">
-                                        <rect key="frame" x="0.0" y="204" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yoa-md-bwp" id="obo-JO-bBd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EeZ-lm-D3r">
-                                        <rect key="frame" x="0.0" y="248" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EeZ-lm-D3r" id="i1g-Jp-94Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xih-Ou-tAR">
-                                        <rect key="frame" x="0.0" y="292" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xih-Ou-tAR" id="J1X-8c-aQ4">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bYX-qg-8E5">
-                                        <rect key="frame" x="0.0" y="336" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bYX-qg-8E5" id="xd9-QF-4CI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Phc-d3-lsb">
-                                        <rect key="frame" x="0.0" y="380" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Phc-d3-lsb" id="itW-iB-LrL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Z4M-2W-41D">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4M-2W-41D" id="2M6-3h-scR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P4d-MY-PMn">
-                                        <rect key="frame" x="0.0" y="468" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P4d-MY-PMn" id="hUt-8X-gVg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rHU-tW-5aA" id="q00-UC-ftz"/>
+                                    <outlet property="delegate" destination="rHU-tW-5aA" id="XbO-Ju-4DR"/>
+                                </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search posts" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-Mj-XEZ">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search posts" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-Mj-XEZ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rHU-tW-5aA" id="bUq-mj-mzl"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NEW-AE-LGh" firstAttribute="leading" secondItem="r0p-Gd-4QQ" secondAttribute="leading" id="11O-6a-FX5"/>
-                            <constraint firstItem="NEW-AE-LGh" firstAttribute="top" secondItem="zUt-Kp-5fB" secondAttribute="bottom" id="f5V-IZ-8Zf"/>
-                            <constraint firstAttribute="trailing" secondItem="NEW-AE-LGh" secondAttribute="trailing" id="ft6-rk-Ueo"/>
+                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="trailing" secondItem="c1t-Ak-8W0" secondAttribute="trailing" id="1vj-x5-Hvs"/>
+                            <constraint firstItem="c1t-Ak-8W0" firstAttribute="top" secondItem="Gdn-Mj-XEZ" secondAttribute="bottom" id="I1r-l8-Drw"/>
+                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="top" secondItem="zUt-Kp-5fB" secondAttribute="bottom" id="JMc-ce-ZTT"/>
+                            <constraint firstItem="NEW-AE-LGh" firstAttribute="leading" secondItem="r0p-Gd-4QQ" secondAttribute="leading" id="LjH-qB-Ws2"/>
+                            <constraint firstAttribute="trailing" secondItem="NEW-AE-LGh" secondAttribute="trailing" id="PhD-P2-2KA"/>
+                            <constraint firstItem="c1t-Ak-8W0" firstAttribute="bottom" secondItem="heN-oI-vec" secondAttribute="top" id="Rtv-Dy-K2D"/>
+                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="top" secondItem="NEW-AE-LGh" secondAttribute="bottom" id="WJG-se-VBv"/>
+                            <constraint firstItem="NEW-AE-LGh" firstAttribute="leading" secondItem="Gdn-Mj-XEZ" secondAttribute="leading" id="vnZ-An-3RA"/>
+                            <constraint firstItem="NEW-AE-LGh" firstAttribute="trailing" secondItem="Gdn-Mj-XEZ" secondAttribute="trailing" id="vtt-5O-jOf"/>
+                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="leading" secondItem="c1t-Ak-8W0" secondAttribute="leading" id="zPo-aJ-Z7C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="I55-eN-orb"/>
+                    <navigationItem key="navigationItem" title="Search" id="I55-eN-orb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="bCl-PM-cUY"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="mySearchBar" destination="Gdn-Mj-XEZ" id="Rep-hA-2eR"/>
+                        <outlet property="myTablView" destination="c1t-Ak-8W0" id="2vX-dM-dro"/>
                         <outlet property="searchBar" destination="Gdn-Mj-XEZ" id="KQs-7w-yaz"/>
                         <outlet property="searchDisplayController" destination="Gej-JC-HvH" id="SxQ-7V-ZVW"/>
                     </connections>
