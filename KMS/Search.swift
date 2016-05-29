@@ -42,13 +42,69 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     {
         var myCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! UITableViewCell
         
+        myCell.textLabel?.text = searchResults[indexPath.row]
+        
         return myCell
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
         print("Seaching...")
+        
+        if(searchBar.text == nil)
+        {
+            return
+        }
+        
+        //doSearch(searchBar.text!)
     }
     
+    /*func doSearch(searchWord: String)
+    {
+     mySearchBar.resignFirstResponder()
+        
+        let myUrl = NSURL(string: "http://localhost/PHP/findFriends.php")
+        
+        let request = NSMutableURLRequest(URL:myUrl!);
+        request.HTTPMethod = "POST";
+        
+        let postString = "searchWord=\(searchWord)"
+        request.HTTPBody = postString.dataUsingEncoding()
+        
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        
+        let session = NSURLSession(configuration: config)
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        dispatch_async(dispatch_get_main_queue())
+        {
+            
+            if error != nil
+            {
+                // error
+                return
+            }
+            
+            var err: NSError?
+            try {var json = NSJSONSerialization.JSONObjectWithData((data?)!, options: .MutableLeaves) as? NSDictionary
+            
+            self.searchResults.removeAll(keepCapacity: false)
+            self.myTablView.reloadData()
+            
+            if let parseJSON = json {
+                if let friends = parseJSON["friends"] as? [AnyObject]
+                {
+                    for friendObj in friends
+                    {
+                        var postTitle = (friendObj["postTile"] as! String)
+                        self.searchResults.append(postTitle)
+                    }
+                    self.myTablView.reloadData()
+                }
+                }
+            }
+            }
+        task.resume();
+    }
+ */
 }
-

@@ -34,7 +34,7 @@ class MySQLDAO
     public function findFriends($searchWord, $userId)
     {
         $returnValue = array();
-        $sql = "select * from post where (postTitle like ? or postDescription like ?) and userID=?";
+        $sql = "select * from post where (postTitle like ? or postDescription like ?)";
   
         $statement = $this->conn->prepare($sql);
 
