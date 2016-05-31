@@ -46,7 +46,9 @@ class RegisterController: UIViewController {
         {
         self.message.textColor = UIColor.blackColor()
         self.message.text = "Submitting..."
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.17/PHP/register.php")!)
+            // Laan van de Bork: 192.168.2.7.
+            // Hunenbaan: 192.168.1.17
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/register.php")!)
         request.HTTPMethod = "POST"
         let postString = "name=\(name.text!)&email=\(email.text!)&password=\(password.text!)&department=\(department.text!)&skills=\(skills.text!)&function=\(function.text!)&about=\(about.text!)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
@@ -90,6 +92,7 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "cubes.jpg")!)
         // Do any additional setup after loading the view, typically from a nib.
         //let url = NSURL (string: "https://m.facebook.com/");
         //let requestObj = NSURLRequest(URL: url!);

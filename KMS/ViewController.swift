@@ -28,7 +28,9 @@ class ViewController: UIViewController {
         {
             self.loginMessage.textColor = UIColor.blackColor()
             self.loginMessage.text = "Logging in..."
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.17/PHP/login.php")!)
+            // Laan van de Bork: 192.168.2.7.
+            // Hunenbaan: 192.168.1.17
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/login.php")!)
         request.HTTPMethod = "POST"
         let postString = "email=\(email.text!)&password=\(password.text!)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
@@ -72,6 +74,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "cubes.jpg")!)
         // Do any additional setup after loading the view, typically from a nib.
         //let url = NSURL (string: "https://m.facebook.com/");
         //let requestObj = NSURLRequest(URL: url!);
