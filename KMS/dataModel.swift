@@ -12,7 +12,7 @@ class dataModel: NSObject {
     
     //properties
     
-    var postID: String?
+    //var postID: Int?
     var postTitle: String?
     var postCategory: String?
     
@@ -23,9 +23,10 @@ class dataModel: NSObject {
     }
     
     //construct with @name, @address, @latitude, and @longitude parameters
-    init(postID: String, postTitle: String, postCategory: String) {
+    //init(postID: Int, postTitle: String, postCategory: String) {
+    init(postTitle: String, postCategory: String) {
         
-        self.postID = postID
+        //self.postID = postID
         self.postTitle = postTitle
         self.postCategory = postCategory
         
@@ -34,6 +35,7 @@ class dataModel: NSObject {
     //prints object's current state
     override var description: String
     {
-        return "Post ID: \(postID), Post Title: \(postTitle), Category: \(postCategory)"
+        //return "Post ID: \(postID), Post Title: \(postTitle), Category: \(postCategory)"
+        return "Post Title: \(postTitle), Category: \(postCategory)"
     }
 }

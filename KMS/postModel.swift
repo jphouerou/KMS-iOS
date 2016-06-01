@@ -12,7 +12,7 @@ protocol postModelProtocal: class {
 }
 
 
-class HomeModel: NSObject, NSURLSessionDataDelegate {
+class postModel: NSObject, NSURLSessionDataDelegate {
     
     //properties
     
@@ -60,6 +60,8 @@ class HomeModel: NSObject, NSURLSessionDataDelegate {
     
     func parseJSON() {
         
+        print("Parsing JSON...")
+        
         var jsonResult: NSMutableArray = NSMutableArray()
         
         do{
@@ -75,18 +77,18 @@ class HomeModel: NSObject, NSURLSessionDataDelegate {
         
         for(var i = 0; i < jsonResult.count; i++)
         {
-            
+            print("JsonResult count")
             jsonElement = jsonResult[i] as! NSDictionary
             
             let location = dataModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let postID = jsonElement["postID"] as? String,
-                let postTitle = jsonElement["postTitle"] as? String,
+            //if let postID = jsonElement["postID"] as? Int,
+            if let postTitle = jsonElement["postTitle"] as? String,
                 let postCategory = jsonElement["postCategory"] as? String
             {
                 
-                location.postID = postID
+                //location.postID = postID
                 location.postTitle = postTitle
                 location.postCategory = postCategory
             }
