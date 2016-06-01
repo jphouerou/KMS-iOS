@@ -56,7 +56,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         let item: dataModel = feedItems[indexPath.row] as! dataModel
         // Get references to labels of cell
         myCell.textLabel!.text = item.postTitle
-        //myCell.textLabel!.text = item.postCategory
+        myCell.detailTextLabel!.text = item.postCategory
         //myCell.textLabel!.text = "Hello world"
         print(item.postTitle)
         
