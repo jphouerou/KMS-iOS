@@ -19,11 +19,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Homepage" id="QKd-V3-V0n">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="search" id="Ldj-Tt-RS7">
-                                        <connections>
-                                            <segue destination="wRs-iq-3ZA" kind="presentation" id="gNQ-Oh-kPW"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem key="leftBarButtonItem" systemItem="search" id="nWe-Fv-TGM"/>
                                     <barButtonItem key="rightBarButtonItem" title="Log In" id="DbT-X5-vJg">
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="presentation" id="1MK-J1-2Xh"/>
@@ -496,97 +492,6 @@
             </objects>
             <point key="canvasLocation" x="193" y="264"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="izq-6Z-Bpz">
-            <objects>
-                <viewController id="rHU-tW-5aA" customClass="SearchViewController" customModule="KMS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zUt-Kp-5fB"/>
-                        <viewControllerLayoutGuide type="bottom" id="heN-oI-vec"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r0p-Gd-4QQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEW-AE-LGh">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Search" id="8uZ-gh-8L6">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Sss-aT-Vrt">
-                                            <connections>
-                                                <segue destination="r3U-Pl-kPJ" kind="presentation" id="RDJ-5l-Ovz"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-Ak-8W0">
-                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="mbJ-LU-vDY">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbJ-LU-vDY" id="Maf-u8-ZY1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="rHU-tW-5aA" id="q00-UC-ftz"/>
-                                    <outlet property="delegate" destination="rHU-tW-5aA" id="XbO-Ju-4DR"/>
-                                </connections>
-                            </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search posts" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-Mj-XEZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                <connections>
-                                    <outlet property="delegate" destination="rHU-tW-5aA" id="bUq-mj-mzl"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="trailing" secondItem="c1t-Ak-8W0" secondAttribute="trailing" id="1vj-x5-Hvs"/>
-                            <constraint firstItem="c1t-Ak-8W0" firstAttribute="top" secondItem="Gdn-Mj-XEZ" secondAttribute="bottom" id="I1r-l8-Drw"/>
-                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="top" secondItem="zUt-Kp-5fB" secondAttribute="bottom" id="JMc-ce-ZTT"/>
-                            <constraint firstItem="NEW-AE-LGh" firstAttribute="leading" secondItem="r0p-Gd-4QQ" secondAttribute="leading" id="LjH-qB-Ws2"/>
-                            <constraint firstAttribute="trailing" secondItem="NEW-AE-LGh" secondAttribute="trailing" id="PhD-P2-2KA"/>
-                            <constraint firstItem="c1t-Ak-8W0" firstAttribute="bottom" secondItem="heN-oI-vec" secondAttribute="top" id="Rtv-Dy-K2D"/>
-                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="top" secondItem="NEW-AE-LGh" secondAttribute="bottom" id="WJG-se-VBv"/>
-                            <constraint firstItem="NEW-AE-LGh" firstAttribute="leading" secondItem="Gdn-Mj-XEZ" secondAttribute="leading" id="vnZ-An-3RA"/>
-                            <constraint firstItem="NEW-AE-LGh" firstAttribute="trailing" secondItem="Gdn-Mj-XEZ" secondAttribute="trailing" id="vtt-5O-jOf"/>
-                            <constraint firstItem="Gdn-Mj-XEZ" firstAttribute="leading" secondItem="c1t-Ak-8W0" secondAttribute="leading" id="zPo-aJ-Z7C"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Search" id="I55-eN-orb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="bCl-PM-cUY">
-                            <connections>
-                                <segue destination="r3U-Pl-kPJ" kind="presentation" id="W7L-oO-jkY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="mySearchBar" destination="Gdn-Mj-XEZ" id="Rep-hA-2eR"/>
-                        <outlet property="myTablView" destination="c1t-Ak-8W0" id="2vX-dM-dro"/>
-                        <outlet property="searchBar" destination="Gdn-Mj-XEZ" id="KQs-7w-yaz"/>
-                        <outlet property="searchDisplayController" destination="Gej-JC-HvH" id="SxQ-7V-ZVW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9xl-Ju-7wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Gej-JC-HvH">
-                    <connections>
-                        <outlet property="delegate" destination="rHU-tW-5aA" id="nCC-PW-xtd"/>
-                        <outlet property="searchContentsController" destination="rHU-tW-5aA" id="0WM-Vk-SxJ"/>
-                        <outlet property="searchResultsDataSource" destination="rHU-tW-5aA" id="3Jl-ff-kuy"/>
-                        <outlet property="searchResultsDelegate" destination="rHU-tW-5aA" id="TZ5-za-ebH"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="158" y="983"/>
-        </scene>
         <!--Register Controller-->
         <scene sceneID="sTr-v8-rcT">
             <objects>
@@ -859,24 +764,6 @@
             </objects>
             <point key="canvasLocation" x="1084" y="264"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Egm-bI-m4O">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wRs-iq-3ZA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOn-46-Bas">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rHU-tW-5aA" kind="relationship" relationship="rootViewController" id="Lbg-zE-gr3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnl-w1-vi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-266" y="983"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Administration icon" width="1600" height="1600"/>
@@ -887,7 +774,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1MK-J1-2Xh"/>
-        <segue reference="W7L-oO-jkY"/>
         <segue reference="0N1-DD-YuE"/>
     </inferredMetricsTieBreakers>
 </document>

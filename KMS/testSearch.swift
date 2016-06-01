@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Search: UIViewController, UITableViewDataSource, UISearchBarDelegate {
-    @IBOutlet var mySarchBar: UISearchBar!
+class testSearchViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+    @IBOutlet var mySearchBar: UISearchBar!
     @IBOutlet var myTablView: UITableView!
     
     var searchResults = [String]()
@@ -35,7 +35,7 @@ class Search: UIViewController, UITableViewDataSource, UISearchBarDelegate {
         return searchResults.count
     }
     
-   
+    
     
     @available(iOS 2.0, *)
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -61,7 +61,7 @@ class Search: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     func doSearch(searchWord: String)
     {
-     searchBar.resignFirstResponder()
+        mySearchBar.resignFirstResponder()
         
         // Laan van de Bork: 192.168.2.7.
         // Hunenbaan: 192.168.1.17
@@ -84,26 +84,26 @@ class Search: UIViewController, UITableViewDataSource, UISearchBarDelegate {
             print("responseString = \(responseString)")
             
             /*
-            var err: NSError?
-            try {var json = NSJSONSerialization.JSONObjectWithData((data?)!, options: .MutableLeaves) as? NSDictionary
-            
-            self.searchResults.removeAll(keepCapacity: false)
-            self.myTablView.reloadData()
-            
-            if let parseJSON = json 
-            {
-                if let friends = parseJSON["friends"] as? [AnyObject]
-                {
-                    for friendObj in friends
-                    {
-                        var postTitle = (friendObj["postTile"] as! String)
-                        self.searchResults.append(postTitle)
-                    }
-                    self.myTablView.reloadData()
-                }
-            }
-            } */
-            }
+             var err: NSError?
+             try {var json = NSJSONSerialization.JSONObjectWithData((data?)!, options: .MutableLeaves) as? NSDictionary
+             
+             self.searchResults.removeAll(keepCapacity: false)
+             self.myTablView.reloadData()
+             
+             if let parseJSON = json
+             {
+             if let friends = parseJSON["friends"] as? [AnyObject]
+             {
+             for friendObj in friends
+             {
+             var postTitle = (friendObj["postTile"] as! String)
+             self.searchResults.append(postTitle)
+             }
+             self.myTablView.reloadData()
+             }
+             }
+             } */
+        }
         task.resume();
     }
 }
