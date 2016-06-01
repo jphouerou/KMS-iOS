@@ -56,42 +56,42 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
             return
         }
         
-        //doSearch(searchBar.text!)
+        doSearch(searchBar.text!)
     }
     
-    /*func doSearch(searchWord: String)
+    func doSearch(searchWord: String)
     {
      mySearchBar.resignFirstResponder()
         
-        let myUrl = NSURL(string: "http://localhost/PHP/findFriends.php")
-        
-        let request = NSMutableURLRequest(URL:myUrl!);
-        request.HTTPMethod = "POST";
-        
+        // Laan van de Bork: 192.168.2.7.
+        // Hunenbaan: 192.168.1.17
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/search.php")!)
+        request.HTTPMethod = "POST"
         let postString = "searchWord=\(searchWord)"
-        request.HTTPBody = postString.dataUsingEncoding()
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        
-        let session = NSURLSession(configuration: config)
-        
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-        dispatch_async(dispatch_get_main_queue())
-        {
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
             
-            if error != nil
-            {
-                // error
+            if error != nil {
+                print("error=\(error)")
                 return
             }
             
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+            
+            /*
             var err: NSError?
             try {var json = NSJSONSerialization.JSONObjectWithData((data?)!, options: .MutableLeaves) as? NSDictionary
             
             self.searchResults.removeAll(keepCapacity: false)
             self.myTablView.reloadData()
             
-            if let parseJSON = json {
+            if let parseJSON = json 
+            {
                 if let friends = parseJSON["friends"] as? [AnyObject]
                 {
                     for friendObj in friends
@@ -101,10 +101,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
                     }
                     self.myTablView.reloadData()
                 }
-                }
             }
+            } */
             }
         task.resume();
     }
- */
 }
