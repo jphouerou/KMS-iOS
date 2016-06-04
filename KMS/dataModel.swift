@@ -15,6 +15,7 @@ class dataModel: NSObject {
     //var postID: Int?
     var postTitle: String?
     var postCategory: String?
+    //var postID: Int?
     
     //empty constructor
     override init()
@@ -29,6 +30,7 @@ class dataModel: NSObject {
         //self.postID = postID
         self.postTitle = postTitle
         self.postCategory = postCategory
+        //self.postID = postID
         
     }
     

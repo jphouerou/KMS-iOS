@@ -22,8 +22,9 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set delegates and initialize homeModel
-        print("View Loaded")
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "cubes.jpg")!)
+        
+        //set delegates and initialize postModel
 
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
@@ -41,24 +42,53 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of feed items
-        print(feedItems.count)
+        // Return number of feed items
         return feedItems.count
-        
     }
+    
+    /* Storing postIDs
+    let ids = [5, 10, 20]
+    
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let id = ids[indexPath.row]
+    }
+     */
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("Table View")
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
-        // Get the location to be shown
+        // Get the post to be shown
         let item: dataModel = feedItems[indexPath.row] as! dataModel
         // Get references to labels of cell
         myCell.textLabel!.text = item.postTitle
         myCell.detailTextLabel!.text = item.postCategory
-        //myCell.textLabel!.text = "Hello world"
-        print(item.postTitle)
+        
+        if (item.postCategory == "Graphic Design")
+        {
+        let imageName = "Design icon.png"
+        let image = UIImage(named: imageName)
+        myCell.imageView?.image = image
+        }
+        if (item.postCategory == "IT")
+        {
+            let imageName = "IT icon.png"
+            let image = UIImage(named: imageName)
+            myCell.imageView?.image = image
+        }
+        if (item.postCategory == "Administration")
+        {
+            let imageName = "Administration icon.png"
+            let image = UIImage(named: imageName)
+            myCell.imageView?.image = image
+        }
+        if (item.postCategory == "Marketing")
+        {
+            let imageName = "Marketing icon.png"
+            let image = UIImage(named: imageName)
+            myCell.imageView?.image = image
+        }
         
         return myCell
     }

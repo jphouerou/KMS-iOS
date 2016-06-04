@@ -22,7 +22,7 @@ class postModel: NSObject, NSURLSessionDataDelegate {
     
     // Laan van de Bork:    192.168.2.7.
     // Hunenbaan:           192.168.1.17
-    let urlPath: String = "http://192.168.2.7/PHP/search.php"
+    let urlPath: String = "http://192.168.1.17/PHP/search.php"
     
     func downloadItems()
     {
@@ -86,11 +86,13 @@ class postModel: NSObject, NSURLSessionDataDelegate {
             //if let postID = jsonElement["postID"] as? Int,
             if let postTitle = jsonElement["postTitle"] as? String,
                 let postCategory = jsonElement["postCategory"] as? String
+                //let postID = jsonElement["postID"] as? Int
             {
                 
                 //location.postID = postID
                 location.postTitle = postTitle
                 location.postCategory = postCategory
+                //location.postID = postID
             }
             
             locations.addObject(location)
