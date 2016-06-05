@@ -19,6 +19,7 @@
 		5255C9401CFF073100E89318 /* postModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255C93F1CFF073100E89318 /* postModel.swift */; };
 		5255C9441CFF2F1800E89318 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255C9431CFF2F1800E89318 /* SearchController.swift */; };
 		526CC0721CFC878400E99D19 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC0711CFC878400E99D19 /* loginController.swift */; };
+		5286432F1D047AB80018AACC /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286432E1D047AB80018AACC /* PostController.swift */; };
 		529F46461CFB1A3100D4C5BB /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F46451CFB1A3000D4C5BB /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		5255C93F1CFF073100E89318 /* postModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postModel.swift; sourceTree = "<group>"; };
 		5255C9431CFF2F1800E89318 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		526CC0711CFC878400E99D19 /* loginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
+		5286432E1D047AB80018AACC /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		529F46451CFB1A3000D4C5BB /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				522118951CDB7064009B80BE /* Info.plist */,
 				5255C93D1CFEF9C000E89318 /* dataModel.swift */,
 				5255C93F1CFF073100E89318 /* postModel.swift */,
+				5286432E1D047AB80018AACC /* PostController.swift */,
 			);
 			path = KMS;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				5255C9401CFF073100E89318 /* postModel.swift in Sources */,
 				5255C9441CFF2F1800E89318 /* SearchController.swift in Sources */,
 				5211634D1CF21B2900672A44 /* Search.swift in Sources */,
+				5286432F1D047AB80018AACC /* PostController.swift in Sources */,
 				5221188C1CDB7064009B80BE /* ViewController.swift in Sources */,
 				5221188A1CDB7064009B80BE /* AppDelegate.swift in Sources */,
 				5255C93E1CFEF9C000E89318 /* dataModel.swift in Sources */,
