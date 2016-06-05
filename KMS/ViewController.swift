@@ -28,9 +28,10 @@ class ViewController: UIViewController {
         {
             self.loginMessage.textColor = UIColor.blackColor()
             self.loginMessage.text = "Logging in..."
+            
             // Laan van de Bork: 192.168.2.7.
             // Hunenbaan: 192.168.1.17
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/login.php")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.17/PHP/login.php")!)
         request.HTTPMethod = "POST"
         let postString = "email=\(email.text!)&password=\(password.text!)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
@@ -54,10 +55,13 @@ class ViewController: UIViewController {
                 self.loginMessage.text = "Successful login."
                 
                 /*
+                let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("search")
+                self.showViewController(vc as! UIViewController, sender: vc) */
+                
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("oldpage") as UIViewController
+                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("search") as UIViewController
                 self.presentViewController(vc, animated: true, completion: nil)
-                 */
+ 
             }
             else
             {
@@ -69,6 +73,12 @@ class ViewController: UIViewController {
         task.resume()
         }
 
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
     }
     
     

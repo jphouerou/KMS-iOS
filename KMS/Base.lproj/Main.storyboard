@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="-724" y="-1"/>
         </scene>
-        <!--Search Controller-->
+        <!--search-->
         <scene sceneID="d4v-oC-S43">
             <objects>
-                <viewController id="Wjv-tG-rsY" customClass="SearchController" customModule="KMS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search" title="search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wjv-tG-rsY" customClass="SearchController" customModule="KMS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Rc-6J-2FU"/>
                         <viewControllerLayoutGuide type="bottom" id="qia-mp-N1L"/>
@@ -552,7 +552,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="email" destination="7DL-Hd-SqL" id="0oQ-Gs-Vhg"/>
-                        <outlet property="login" destination="kGS-zf-XCR" id="13f-hK-K2a"/>
                         <outlet property="loginMessage" destination="kur-Bh-IwB" id="Cef-PM-YvA"/>
                         <outlet property="password" destination="qUR-Vo-ufT" id="blK-5b-cqA"/>
                     </connections>
