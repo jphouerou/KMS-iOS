@@ -24,7 +24,7 @@
 			if(mysql_num_rows($select) == 1)
 			
 			echo 'Successfully added.';
-			echo $query;
+			//echo $select;
 		}
 	}
 ?>

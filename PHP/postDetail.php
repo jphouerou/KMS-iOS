@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'Locations'
-$sql = "SELECT * FROM post LIMIT 50";
+$sql = "SELECT * FROM post WHERE postID = '1' LIMIT 1";
  
 // Check if there are results
 if ($result = mysqli_query($con, $sql))
