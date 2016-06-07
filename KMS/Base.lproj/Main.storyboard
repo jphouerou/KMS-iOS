@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r3U-Pl-kPJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ark-N2-gJ1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,9 +7,80 @@
     </dependencies>
     <scenes>
         <!--Homepage-->
+        <scene sceneID="d3G-T9-lFi">
+            <objects>
+                <viewController storyboardIdentifier="Homepage" title="Homepage" id="ark-N2-gJ1" customClass="HomepageController" customModule="KMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Li4-AA-aaj"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQy-Fg-FOF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6p9-En-oFp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egk-lJ-E5x">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Homepage" id="1ki-an-b9i">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="nxz-iA-rKT">
+                                            <connections>
+                                                <segue destination="Wjv-tG-rsY" kind="presentation" id="UlV-qf-D2S"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="FEr-nJ-YJc">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="NQD-UD-aeo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-uM-hkG">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" textLabel="h5d-J5-T2F" detailTextLabel="PK5-uJ-9g6" style="IBUITableViewCellStyleSubtitle" id="R7T-uh-EPy">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R7T-uh-EPy" id="Pmq-eU-0NY">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h5d-J5-T2F">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PK5-uJ-9g6">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="listTableView" destination="LSS-uM-hkG" id="XsV-7P-K1B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDK-0U-tlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1050" y="218"/>
+        </scene>
+        <!--OldHome-->
         <scene sceneID="0dg-gO-zGg">
             <objects>
-                <tableViewController storyboardIdentifier="Homepage" title="Homepage" id="r3U-Pl-kPJ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="oldHome" title="OldHome" id="r3U-Pl-kPJ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SDO-t0-JVM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,16 +90,8 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Homepage" id="QKd-V3-V0n">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="search" id="nWe-Fv-TGM">
-                                        <connections>
-                                            <segue destination="Wjv-tG-rsY" kind="presentation" id="7H3-Ms-5ZE"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" title="Log In" id="DbT-X5-vJg">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="1MK-J1-2Xh"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem key="leftBarButtonItem" systemItem="search" id="nWe-Fv-TGM"/>
+                                    <barButtonItem key="rightBarButtonItem" title="Log In" id="DbT-X5-vJg"/>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -196,7 +259,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4b-gt-H0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-724" y="-1"/>
+            <point key="canvasLocation" x="-680" y="-279"/>
         </scene>
         <!--search-->
         <scene sceneID="d4v-oC-S43">
@@ -841,8 +904,8 @@
         <image name="logo" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7tq-Ba-abK"/>
-        <segue reference="1MK-J1-2Xh"/>
         <segue reference="0N1-DD-YuE"/>
+        <segue reference="NQD-UD-aeo"/>
+        <segue reference="UlV-qf-D2S"/>
     </inferredMetricsTieBreakers>
 </document>
