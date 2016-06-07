@@ -65,7 +65,7 @@ class Search: UIViewController, UITableViewDataSource, UISearchBarDelegate {
         
         // Laan van de Bork: 192.168.2.7.
         // Hunenbaan: 192.168.1.17
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.17/PHP/search.php")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/search.php")!)
         request.HTTPMethod = "POST"
         let postString = "searchWord=\(searchWord)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol postDetailProtocal: class {
+protocol postDetailModelProtocal: class {
     func itemsDownloaded(items: NSArray)
 }
 
@@ -16,13 +16,13 @@ class postDetailModel: NSObject, NSURLSessionDataDelegate {
     
     //properties
     
-    weak var delegate: postModelProtocal!
+    weak var delegate: postDetailModelProtocal!
     
     var data : NSMutableData = NSMutableData()
     
     // Laan van de Bork:    192.168.2.7.
     // Hunenbaan:           192.168.1.17
-    let urlPath: String = "http://192.168.1.17/PHP/postDetail.php"
+    let urlPath: String = "http://192.168.2.7/PHP/postDetail.php"
     
     func downloadItems()
     {
@@ -75,7 +75,8 @@ class postDetailModel: NSObject, NSURLSessionDataDelegate {
         var jsonElement: NSDictionary = NSDictionary()
         let posts: NSMutableArray = NSMutableArray()
         
-        for(var i = 0; i < jsonResult.count; i++)
+        // for(var i = 0; i < jsonResult.count; i++)
+        for(var i = 0; i < 1; i++)
         {
             print("JsonResult count")
             jsonElement = jsonResult[i] as! NSDictionary

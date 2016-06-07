@@ -22,7 +22,7 @@ class postModel: NSObject, NSURLSessionDataDelegate {
     
     // Laan van de Bork:    192.168.2.7.
     // Hunenbaan:           192.168.1.17
-    let urlPath: String = "http://192.168.1.17/PHP/search.php"
+    let urlPath: String = "http://192.168.2.7/PHP/search.php"
     
     func downloadItems()
     {

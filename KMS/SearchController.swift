@@ -9,15 +9,57 @@
 import Foundation
 import UIKit
 
-class SearchController: UIViewController, UITableViewDataSource, UITableViewDelegate, postModelProtocal {
-
-    //@IBOutlet weak var listTableView: UITableView!
+class SearchController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, postModelProtocal {
+    
     
     //Properties
     
     var feedItems: NSArray = NSArray()
     var selectedLocation : dataModel = dataModel()
     @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+    {
+        if(searchBar.text!.isEmpty)
+        {
+        print ("empty searchbar")
+        /* searchBar.resignFirstResponder()
+        self.listTableView.delegate = self
+        self.listTableView.dataSource = self
+        
+        let PostModel = postModel()
+        PostModel.delegate = self
+        PostModel.downloadItems() */
+        return
+        }
+            doSearch(searchBar.text!)
+        /* else
+        {
+            print ("Searching...")
+            searchBar.resignFirstResponder()
+            self.listTableView.delegate = self
+            self.listTableView.dataSource = self
+            
+            let PostModel = postModel()
+            PostModel.delegate = self
+            PostModel.downloadItems()
+        } */
+        //return true
+    }
+    
+    func doSearch(searchWord: String)
+    {
+        print ("Searching...")
+        searchBar.resignFirstResponder()
+        self.listTableView.delegate = self
+        self.listTableView.dataSource = self
+        
+        let PostModel = postModel()
+        PostModel.delegate = self
+        PostModel.downloadItems()
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

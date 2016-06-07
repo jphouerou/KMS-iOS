@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             
             // Laan van de Bork: 192.168.2.7.
             // Hunenbaan: 192.168.1.17
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.17/PHP/login.php")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.2.7/PHP/login.php")!)
         request.HTTPMethod = "POST"
         let postString = "email=\(email.text!)&password=\(password.text!)"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)

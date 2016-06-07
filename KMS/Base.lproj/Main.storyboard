@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDK-0U-tlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050" y="218"/>
+            <point key="canvasLocation" x="-1050" y="228"/>
         </scene>
         <!--search-->
         <scene sceneID="d4v-oC-S43">
@@ -92,8 +92,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-KB-1XS">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="search"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="deb-u5-34I">
-                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="PyY-7U-UFJ" detailTextLabel="L7L-ep-Htd" style="IBUITableViewCellStyleSubtitle" id="G3Q-8h-wPW">
@@ -131,11 +135,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="listTableView" destination="deb-u5-34I" id="40N-eT-c8F"/>
+                        <outlet property="searchBar" destination="1wX-KB-1XS" id="429-mX-eQ1"/>
+                        <segue destination="ark-N2-gJ1" kind="presentation" id="zCi-27-nU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wc-zR-h7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050" y="984"/>
+            <point key="canvasLocation" x="-1050" y="974"/>
         </scene>
         <!--Post Controller-->
         <scene sceneID="vvN-Mj-gyN">
@@ -222,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3O-rk-0Wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602" y="984"/>
+            <point key="canvasLocation" x="-602" y="974"/>
         </scene>
         <!--Log In-->
         <scene sceneID="tne-QT-ifu">
@@ -613,8 +619,9 @@
         <image name="logo" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="mHx-ti-jET"/>
+        <segue reference="zCi-27-nU4"/>
+        <segue reference="NQD-UD-aeo"/>
         <segue reference="UG8-jl-2dP"/>
-        <segue reference="wwe-SW-btK"/>
-        <segue reference="v22-Tt-ose"/>
     </inferredMetricsTieBreakers>
 </document>

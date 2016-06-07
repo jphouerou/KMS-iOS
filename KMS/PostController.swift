@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class PostController: UIViewController, postDetailProtocal {
+class PostController: UIViewController, postDetailModelProtocal {
     
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet var postDescription: UILabel!
     
     
     var feedItems: NSArray = NSArray()
-    var selectedLocation : postDetailModel = postDetailModel()
+    var selectedLocation : postDetailDataModel = postDetailDataModel()
     
     override func viewDidLoad()
     {
@@ -25,9 +25,9 @@ class PostController: UIViewController, postDetailProtocal {
         
         //set delegates and initialize postModel
         
-        let PostModel = postDetailModel()
-        // PostModel.delegate = self
-        PostModel.downloadItems()
+        let PostDetailModel = postDetailModel()
+        PostDetailModel.delegate = self
+        PostDetailModel.downloadItems()
     }
     
     override func didReceiveMemoryWarning()
@@ -45,7 +45,7 @@ class PostController: UIViewController, postDetailProtocal {
     {
         
         // Get the post to be shown
-        let item: postDetailDataModel = feedItems[1] as! postDetailDataModel
+        let item: postDetailDataModel = feedItems[0] as! postDetailDataModel
         
         // Get references to labels of cell
         postTitle.text = item.postTitle
