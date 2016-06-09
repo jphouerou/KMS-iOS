@@ -59,7 +59,7 @@ class ViewController: UIViewController {
                 self.showViewController(vc as! UIViewController, sender: vc) */
                 
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("search") as UIViewController
+                let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("homepage") as UIViewController
                 self.presentViewController(vc, animated: true, completion: nil)
  
             }

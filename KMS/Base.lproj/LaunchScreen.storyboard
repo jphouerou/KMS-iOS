@@ -14,30 +14,27 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="D3G-DK-CoA">
-                                <rect key="frame" x="280" y="280" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="cKf-oc-vFv"/>
-                                    <constraint firstAttribute="width" constant="200" id="r94-ab-bRa"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIVVY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE1-cF-gIb">
+                                <rect key="frame" x="127" y="271" width="67" height="26"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="D3G-DK-CoA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Md-7I-d1b"/>
-                            <constraint firstItem="D3G-DK-CoA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qH3-sb-GGA"/>
+                            <constraint firstItem="wE1-cF-gIb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IeT-JP-3dq"/>
+                            <constraint firstItem="wE1-cF-gIb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yJW-pF-VLh"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="40" height="40"/>
-    </resources>
 </document>

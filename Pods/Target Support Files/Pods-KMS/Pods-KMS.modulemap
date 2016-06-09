@@ -1,0 +1,6 @@
+framework module Pods_KMS {
+  umbrella header "Pods-KMS-umbrella.h"
+
+  export *
+  module * { export * }
+}
