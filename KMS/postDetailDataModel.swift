@@ -31,11 +31,14 @@ class postDetailDataModel: NSObject {
         self.postCategory = postCategory
         //self.userID = userID
         
+        
+        
     }
     
     //prints object's current state
     override var description: String
     {
+        print ("Post Title: " + postTitle!)
         return "Post Title: \(postTitle), Post Description: \(postDescription), Category: \(postCategory)"
     }
 }

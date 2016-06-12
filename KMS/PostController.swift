@@ -28,6 +28,9 @@ class PostController: UIViewController, postDetailModelProtocal {
         let PostDetailModel = postDetailModel()
         PostDetailModel.delegate = self
         PostDetailModel.downloadItems()
+        
+        //itemsDownloaded(NSArray)
+        //tableView(<#T##indexPath: NSIndexPath##NSIndexPath#>)
     }
     
     override func didReceiveMemoryWarning()
@@ -39,17 +42,26 @@ class PostController: UIViewController, postDetailModelProtocal {
     func itemsDownloaded(items: NSArray)
     {
         feedItems = items
+        
+        //let item: postDetailDataModel = feedItems[1] as! postDetailDataModel
+        
+        postTitle.text = "Hello, this is a test post title"
+        postDescription.text = "This is a text description, it is intentionally long to test what happens to a long piece of text"
+        //print ("Post Title: " + item.postTitle.text!)
+        //print ("Post Desc: " + postDescription.text!)
     }
     
-    func tableView()
+    func tableView(indexPath: NSIndexPath)
     {
         
         // Get the post to be shown
-        let item: postDetailDataModel = feedItems[0] as! postDetailDataModel
+        let item: postDetailDataModel = feedItems[indexPath.row] as! postDetailDataModel
+        
+        //print ("Post Title: " + postTitle.text!)
         
         // Get references to labels of cell
-        postTitle.text = item.postTitle
-        postDescription.text = item.postDescription
+        //postTitle.text = item.postTitle
+        //postDescription.text = item.postDescription
     }
 
 

@@ -137,7 +137,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="listTableView" destination="deb-u5-34I" id="40N-eT-c8F"/>
-                        <outlet property="searchBar" destination="1wX-KB-1XS" id="429-mX-eQ1"/>
+                        <outlet property="mySearchBar" destination="1wX-KB-1XS" id="KJ2-KN-9HB"/>
                         <segue destination="ark-N2-gJ1" kind="presentation" id="zCi-27-nU4"/>
                     </connections>
                 </viewController>
@@ -691,9 +691,9 @@
         <image name="logo" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wwe-SW-btK"/>
+        <segue reference="zCi-27-nU4"/>
+        <segue reference="mHx-ti-jET"/>
         <segue reference="0N1-DD-YuE"/>
-        <segue reference="206-c7-S0f"/>
-        <segue reference="v22-Tt-ose"/>
+        <segue reference="wwe-SW-btK"/>
     </inferredMetricsTieBreakers>
 </document>

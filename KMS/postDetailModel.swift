@@ -22,7 +22,7 @@ class postDetailModel: NSObject, NSURLSessionDataDelegate {
     
     // Laan van de Bork:    192.168.2.7.
     // Hunenbaan:           192.168.1.17
-    let urlPath: String = "http://192.168.2.7/PHP/postDetail.php"
+    let urlPath: String = "http://192.168.1.17/PHP/postDetail.php"
     
     func downloadItems()
     {
@@ -76,7 +76,7 @@ class postDetailModel: NSObject, NSURLSessionDataDelegate {
         let posts: NSMutableArray = NSMutableArray()
         
         // for(var i = 0; i < jsonResult.count; i++)
-        for(var i = 0; i < 1; i++)
+        for(var i = 0; 1 < i; i++)
         {
             print("JsonResult count")
             jsonElement = jsonResult[i] as! NSDictionary
@@ -89,14 +89,19 @@ class postDetailModel: NSObject, NSURLSessionDataDelegate {
                 let postDescription = jsonElement["postDescription"] as? String,
                 let postCategory = jsonElement["postCategory"] as? String
                 //let userID = jsonElement["userID"] as? Int
+                
+                
             {
                 post.postTitle = postTitle
                 post.postDescription = postDescription
                 post.postCategory = postCategory
                 //post.userID = userID
+
+                
             }
             
             posts.addObject(post)
+            
             
         }
         
